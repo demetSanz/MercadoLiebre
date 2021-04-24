@@ -1,0 +1,159 @@
+/*Estilos del cuerpo*/
+body {
+    background-color: #EAC926;;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/*Estilos de la barra de busqueda*/
+.search-bar {
+    background-color: white;
+    display: inline; /*cambio de block a inline*/
+    border-radius: 2px;
+    padding: 1px;
+    font-size: 12px;
+    color: grey;
+    border-style: solid; 
+    border-color: #666;
+    border-width: 1px;
+}
+
+.lupa {
+    background-color: white;
+    display: inline;
+    font-size: 12px;
+    padding: 1px;
+    border-radius: 2px;
+    color: grey;
+    border-style: solid; 
+    border-color: #666;
+    border-width: 1px;
+}
+
+/*Estilo del Slogan principal*/
+.slogan {
+    margin: 20px;
+    text-align: center;
+}
+
+/*Estilos del Menu Hamburguesa"*/
+.burger-menu {
+    text-align: center;
+}
+
+.burger-menu i {
+    padding:20px;
+    border-radius: 10px;
+    background-color: #1259c3;
+    color: white;
+}
+
+/*Estilos de sección Home-Main*/
+.main {
+    background-color: #ebebeb;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+/*Estilos de seccion Home-Ofertas*/
+.ofertas {
+    background-color: #ebebeb;
+    text-align: center;
+    margin: 15px;
+    width: 90%;
+}
+
+.producto {
+    background-color: #ebebeb;
+}
+
+.producto-description {
+    background-color: white;
+    margin-top: 1px grey;
+}
+
+article img {
+    padding-top: 10px;
+}
+
+article {
+    background-color: white;
+}
+
+article div {
+    border-top: solid #ebebeb 1px;
+    text-align: left;
+    padding: 15px 15px;
+}
+
+section h2 {
+    font-size: 24px;
+}
+
+article p {
+    font-size: 18px;
+}
+
+article h4 {
+    font-size: 16px;
+}
+
+.descuento {
+    font-size: 16px;
+}
+
+.truck {
+    color: green;
+    border: solid green 1px;
+    padding: 1px;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+
+.descuento {
+    color: green;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+/*Estilos de seccion Footer*/
+.footer {
+    position: relative;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    bottom: 0;
+    height: 400px;
+}
+
+/*estilos de iconos .fas .far en footer*/
+.footer .condiciones li i  { 
+    font-size: 2em;
+    color: #1259c3;
+}
+
+.condiciones {
+    list-style: none;
+    text-align: center;
+    
+}
+
+ul.condiciones {
+    list-style-type: none;
+    padding-left: 0%;
+}
+
+
