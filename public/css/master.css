@@ -1,12 +1,30 @@
+/*Regla universal*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 /*Estilos del cuerpo*/
 body {
-    background-color: #EAC926;;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     width: auto;
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+/*Estilos del header*/
+
+.header {
+    background-color: #EAC926;
+    padding: 20px;
+}
+
+.logo {
+    width: 100px;
 }
 
 /*Estilos de la barra de busqueda*/
@@ -35,9 +53,35 @@ body {
 }
 
 /*Estilo del Slogan principal*/
-.slogan {
+.copy-header {
     margin: 20px;
     text-align: center;
+    font-size: 12px;
+}
+
+/*Estilos de Navbar*/
+.main-navbar {
+    display: none;
+}
+
+.main-navbar ul {
+    list-style-type: none; /*elimino los bullet points*/
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: darkblue;
+    font-size: 17px;
+    display: inline-block;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.right-navbar i {
+    display: inline-block;
+    padding: 5px;
 }
 
 /*Estilos del Menu Hamburguesa"*/
@@ -62,21 +106,62 @@ body {
     width: 100%;
 }
 
+/*estilos del camioncito de delivery*/
+
+/*.truck {
+    display: block ;
+    font-size: 16 px ;
+    padding: 5 px ;
+    width: 30 px ;
+    height: 30 px ;
+    border: 1 px solid #39b54a ;
+    background-color: #FFF ;
+    border-radius: 50 % ;
+    position: absolute ;
+    right: 20 px ;
+    top: -15 px ;
+    }*/
+
+.truck {
+        color: green;
+        border: solid green 1px;
+        padding: 1px;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+        text-align: left;
+}
+
 /*Estilos de seccion Home-Ofertas*/
 .ofertas {
     background-color: #ebebeb;
     text-align: center;
-    margin: 15px;
-    width: 90%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.ofertas h2 {
+    margin-top: 0;
 }
 
 .producto {
     background-color: #ebebeb;
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+    margin: 1px;
+    padding: 1px;
+
 }
 
 .producto-description {
     background-color: white;
     margin-top: 1px grey;
+}
+
+.descripcion {
+    display: none;
 }
 
 article img {
@@ -105,38 +190,28 @@ article h4 {
     font-size: 16px;
 }
 
-.descuento {
-    font-size: 16px;
+.precio {
+    width: 30%;
 }
-
-.truck {
-    color: green;
-    border: solid green 1px;
-    padding: 1px;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
-    text-align: left;
-}
-
-
 
 .descuento {
     color: green;
     font-weight: bold;
     margin-top: 2px;
+    font-size: 16px;
+    width: 70%;
 }
 
 /*Estilos de seccion Footer*/
 .footer {
     position: relative;
     background-color: white;
-    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin: 0;
     width: 100%;
     bottom: 0;
-    height: 400px;
+    height: auto;
 }
 
 /*estilos de iconos .fas .far en footer*/
@@ -156,4 +231,165 @@ ul.condiciones {
     padding-left: 0%;
 }
 
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
 
+/*Breakpoints para vistas en multiples dispositivos*/
+
+@media (min-width: 460px){
+    /*TABLETS*/
+    /*Config Top Bar*/
+    .header-top-bar {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .copy-header {
+        max-width: 200px;
+        text-align: right;
+        font-size: 14px;
+    }
+    /*agrando logo para vista Tablet*/
+    .logo {
+        width: 150px;
+    }
+
+    /*Muestro la NAVBAR*/
+    .main-navbar {
+        display: flex;
+        justify-content: space-between;   
+        font-size: 14px;
+    }
+
+    .main-navbar ul {
+        display: flex
+    }
+
+    .main-navbar li {
+        margin: 0 5px;
+    }
+
+    .main-navbar ul li a {
+        font-size: 12px;
+    }
+
+    .search-bar{
+        max-height: 20px;
+        align-self: center;
+    }
+
+    .lupa{
+        max-height: 20px;
+        align-self: center;
+    }
+
+    /*Escondo el menu de hamburguesa*/
+    .burger-menu {
+        display: none;
+    }
+
+    /*Muestro la descripcion del producto*/
+    .descripcion {
+        display:block;
+
+        /*box-shadow: 0px 0px 10px rgb(100,100,100); No funciona como corresponde. Revisar */
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .ofertas {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .articulo {
+        box-shadow: 0px 0px 10px rgb(100,100,100);
+    }
+}
+
+@media (min-width: 768px) {
+    /*DESKTOP*/
+    /*Config Top Bar*/
+    .header-top-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .copy-header {
+        max-width: 200px;
+        text-align: right;
+    }
+    /*agrando logo para vista PC*/
+    .logo {
+        width: 200px;
+    }
+
+    /*Muesto la NAVBAR*/
+    .main-navbar {
+        display: flex;
+        justify-content: space-between;   
+    }
+
+    .main-navbar ul {
+        display: flex
+    }
+
+    .main-navbar li {
+        margin: 0 5px;
+    }
+
+    .search-bar{
+        max-height: 20px;
+        align-self: center;
+    }
+
+    .lupa{
+        max-height: 20px;
+        align-self: center;
+    }
+
+    /*Escondo el menu de hamburguesa*/
+    .burger-menu {
+        display: none;
+    }
+    
+    /*Muestro la descripcion del producto*/
+    .descripcion {
+        display:block;
+
+        /*box-shadow: 0px 0px 10px rgb(100,100,100); No funciona como corresponde. Revisar */
+    }
+
+    .articulo {
+        box-shadow: 0px 0px 10px rgb(100,100,100);
+    }
+}
+
+/*agrego limites para que no crezcan el menu por encima de 1200 px*/
+@media (min-width: 1200px){
+    .header-top-bar, .main-navbar {
+        max-width: 1200px;
+        /*border: dotted red 10px;*/
+        margin: auto;
+    }
+
+    .copy-header{
+        max-width: none;
+    }
+
+    .main-navbar {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    .main-navbar li {
+        margin: 0 10px;
+    }
+}
