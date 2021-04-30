@@ -29,15 +29,22 @@ body {
 
 /*Estilos de la barra de busqueda*/
 .search-bar {
-    background-color: white;
+    background-color: #EAC926;
     display: inline; /*cambio de block a inline*/
     border-radius: 2px;
     padding: 1px;
     font-size: 12px;
-    color: grey;
-    border-style: solid; 
+    color: grey; 
     border-color: #666;
     border-width: 1px;
+    position: relative;
+}
+
+.search-bar input {
+    height: 20px;
+    border-radius: 5px;
+    font-style: italic;
+    border: white;
 }
 
 .lupa {
@@ -45,11 +52,15 @@ body {
     display: inline;
     font-size: 12px;
     padding: 1px;
-    border-radius: 2px;
+    border-radius: 5px;
     color: grey;
-    border-style: solid; 
-    border-color: #666;
-    border-width: 1px;
+    position: absolute;
+    right: 5px;
+    border: none;
+}
+
+.header-top-bar {
+    align-items: center; /*centro la search bar*/
 }
 
 /*Estilo del Slogan principal*/
@@ -192,6 +203,36 @@ article p {
     display: none;
 }
 
+/*Estilos del Form*/
+
+.create-form{
+    padding: 20px 15px;
+}
+
+.control-formulario {
+    margin-bottom: 15px;
+}
+
+.control-formulario label {
+    margin-bottom: 5px;
+    font-style: italic;
+    display: block;
+}
+
+.control {
+    width: 100%;
+    padding: 8px 8px;
+}
+
+.form-button{
+    background-color: #39b54a;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 /*Estilos de seccion Footer*/
 .footer {
     position: relative;
@@ -267,7 +308,6 @@ ul.condiciones {
     }
 
     .search-bar{
-        max-height: 20px;
         align-self: center;
     }
 
@@ -275,6 +315,7 @@ ul.condiciones {
         max-height: 20px;
         align-self: center;
     }
+
 
     /*Escondo el menu de hamburguesa*/
     .burger-menu {

@@ -18,8 +18,17 @@ rel="stylesheet" />
 
     <div class="header-top-bar">
         <img src="./images/logo-mercado-liebre.svg" class="logo">
-        <div class="search-bar">Buscar productos, marcas y otros...</div>
-        <div class="lupa"><i class="fas fa-search"></i></div>
+
+        <!--<div >Buscar productos, marcas y otros...</div>
+        Convierto la barra de busqueda en un FORM-->
+
+        <form action="/" method="GET">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <div class="lupa"><i class="fas fa-search"></i></div>
+            </div>
+        </form>
+
         <h2 class="copy-header">
             <i class="fas fa-hand-holding-usd"></i>
             Comprá en cuotas y sin tarjeta de crédito
@@ -34,7 +43,7 @@ rel="stylesheet" />
             <li><a href="#">Ayuda</a></li>
         </ul>
         <ul class="right-navbar">
-            <li><a href="#">Creá tu cuenta</a><i class="far fa-address-card"></i></li>
+            <li><a href="/register">Creá tu cuenta</a><i class="far fa-address-card"></i></li>
             <li><a href="#">Ingresá</a> <i class="fas fa-sign-in-alt"></i></li>
             <li><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
         </ul>
@@ -154,5 +163,47 @@ rel="stylesheet" />
             <li><h3>Copyright © 1999-2020 MercadoLiebre S.R.L.</h3></li>
         </ul>
     </section>
+
+    <!-- Formulario de ejercicio PlayGround
+
+    <form action="/crear-producto" method="POST" class="create-form">
+        <div class="control-formulario">
+            <label>Nombre del producto:</label>
+            <input type="text" name="nombre" class="control">
+        </div>
+        <div class="control-formulario">
+            <label>Precio del producto:</label>
+            <input type="number" name="precio" placeholder="123.56" class="control">
+        </div>
+        <div class="control-formulario">
+            <label>Categoria:</label>
+            <select name="categoria">
+                <option value="hogar">Hogar</option>
+                <option value="electro">Electro</option>
+                <option value="indumentaria">Indumentaria</option>
+            </select>
+        </div>
+        <div class="control-formulario">
+            <label>Ciudad:</label>
+            <select name="ciudad">
+                <option value="ros">Rosario</option>
+                <option value="bas">Buenos Aires</option>
+                <option value="mdz">Mendoza</option>
+            </select>
+        </div>
+        <div class="control-formulario">
+            <label>Descripción:</label>
+            <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="control-formulario">
+            <label>Está en oferta?</label>
+            <input type="radio" name="enOferta">
+        </div>
+        <button type="reset" class="form-button">Borrar</button>
+        <button type="submit" class="form-button">Guardar</button>
+    </form>
+
+    -->
+
 </body>
 </html>
