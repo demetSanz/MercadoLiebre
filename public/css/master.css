@@ -96,41 +96,64 @@ body {
     color: white;
 }
 
+/*Estilos de Titulares Main y Offers*/
+
+.title-main, .title-offers {
+    background-color: #ebebeb;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+}
+
 /*Estilos de sección Home-Main*/
+
 .main {
     background-color: #ebebeb;
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 15px;
+    width: 100%;
+}
+
+/*estilos de tarjeta de productos*/
+
+.producto {
+    background-color: #ebebeb;
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+    margin: auto;
+    padding: 1px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.producto-descripcion {
+    background-color: white;
+    text-align: left;
+    margin-top: 1px;
+    padding: 5%;
     position: relative;
     width: 100%;
 }
 
-/*estilos del camioncito de delivery*/
+/*estilos del camioncito de delivery:
+https://dzone.com/articles/css-position-relative-vs-position-absolute#:~:text=Relative%20%2D%20the%20element%20is%20positioned,on%20the%20user's%20scroll%20position.*/
 
-/*.truck {
-    display: block ;
-    font-size: 16 px ;
-    padding: 5 px ;
-    width: 30 px ;
-    height: 30 px ;
-    border: 1 px solid #39b54a ;
-    background-color: #FFF ;
-    border-radius: 50 % ;
-    position: absolute ;
-    right: 20 px ;
-    top: -15 px ;
-    }*/
 
-.truck {
+.producto-descripcion i {
         color: green;
-        border: solid green 1px;
-        padding: 1px;
+        border: 1px solid #39b54a;
+        padding: 5px;
         border-radius: 50%;
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         font-size: 16px;
-        text-align: left;
+        right: 20px;
+        top: -15px;
+        text-align: center;
+        background-color: white;
+        position: absolute;
 }
 
 /*Estilos de seccion Home-Ofertas*/
@@ -138,44 +161,13 @@ body {
     background-color: #ebebeb;
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 15px;
     position: relative;
     width: 100%;
 }
 
-.ofertas h2 {
-    margin-top: 0;
-}
-
-.producto {
-    background-color: #ebebeb;
-    box-shadow: 0px 0px 10px rgb(100,100,100);
-    margin: 1px;
-    padding: 1px;
-
-}
-
-.producto-description {
-    background-color: white;
-    margin-top: 1px grey;
-}
-
-.descripcion {
-    display: none;
-}
-
-article img {
-    padding-top: 10px;
-}
-
 article {
-    background-color: white;
-}
-
-article div {
-    border-top: solid #ebebeb 1px;
-    text-align: left;
-    padding: 15px 15px;
+    background-color: #EBEBEB;
 }
 
 section h2 {
@@ -186,20 +178,18 @@ article p {
     font-size: 18px;
 }
 
-article h4 {
-    font-size: 16px;
-}
-
-.precio {
-    width: 30%;
-}
-
 .descuento {
     color: green;
     font-weight: bold;
     margin-top: 2px;
     font-size: 16px;
     width: 70%;
+}
+
+.nombre-producto{
+    font-size: 12px;
+    font-weight: bold;
+    display: none;
 }
 
 /*Estilos de seccion Footer*/
@@ -292,25 +282,24 @@ ul.condiciones {
     }
 
     /*Muestro la descripcion del producto*/
-    .descripcion {
+    .nombre-producto {
         display:block;
-
-        /*box-shadow: 0px 0px 10px rgb(100,100,100); No funciona como corresponde. Revisar */
     }
 
-    .main {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-
-    .ofertas {
+    .main{
         display: flex;
         flex-wrap: wrap;
+        align-items: flex-start;
     }
 
-    .articulo {
-        box-shadow: 0px 0px 10px rgb(100,100,100);
+    .ofertas{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .producto {
+        max-width: 45%;
     }
 }
 
@@ -359,16 +348,10 @@ ul.condiciones {
     .burger-menu {
         display: none;
     }
-    
-    /*Muestro la descripcion del producto*/
-    .descripcion {
-        display:block;
 
-        /*box-shadow: 0px 0px 10px rgb(100,100,100); No funciona como corresponde. Revisar */
-    }
-
-    .articulo {
-        box-shadow: 0px 0px 10px rgb(100,100,100);
+    /*Ajuto width para que que se vean 4 flex items en pantalla*/
+    .producto {
+        max-width: 23%;
     }
 }
 
