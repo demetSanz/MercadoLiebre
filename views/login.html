@@ -15,15 +15,26 @@ rel="stylesheet" />
 </head>
 <body>
     <header class="header">
+
     <div class="header-top-bar">
         <img src="./images/logo-mercado-liebre.svg" class="logo">
-        <div class="search-bar">Buscar productos, marcas y otros...</div>
-        <div class="lupa"><i class="fas fa-search"></i></div>
+
+        <!--<div >Buscar productos, marcas y otros...</div>
+        Convierto la barra de busqueda en un FORM-->
+
+        <form action="/" method="GET">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <div class="lupa"><i class="fas fa-search"></i></div>
+            </div>
+        </form>
+
         <h2 class="copy-header">
             <i class="fas fa-hand-holding-usd"></i>
             Comprá en cuotas y sin tarjeta de crédito
         </h2>
     </div>
+
     <nav class="main-navbar">
         <ul class="left-navbar">
             <li><a href="#">Ofertas</a></li>
@@ -32,27 +43,29 @@ rel="stylesheet" />
             <li><a href="#">Ayuda</a></li>
         </ul>
         <ul class="right-navbar">
-            <li><a href="/views/register.html">Creá tu cuenta</a><i class="far fa-address-card"></i></li>
-            <li><a href="#">Ingresá</a> <i class="fas fa-sign-in-alt"></i></li>
+            <li><a href="/register">Creá tu cuenta</a><i class="far fa-address-card"></i></li>
+            <li><a href="/login">Ingresá</a> <i class="fas fa-sign-in-alt"></i></li>
             <li><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
         </ul>
     </nav>
     <div class="burger-menu">
         <i class="fas fa-bars"></i>
         </div> 
-    </header>         
-    <h2 class="title-main">Formulario de Registro</h2>
-    <main>
-        <form action="/" method="GET">
+    </header>
+    
+    
+    <h2 class="title-main">Ingresá a tu cuenta</h2>
+    <main class="main-login">
+        <form action="/" method="GET" class="login-form">
             <div class="control-formulario">
-                <label>Nombre de Usuario:</label>
-                <input type="text" name="name">
+                <label></label>
+                <input type="text" name="name" placeholder="Nombre de Usuario" required>
             </div>
             <div class="control-formulario">
-                <label>Contraseña:</label>
-                <input type="password" name="password">
+                <label></label>
+                <input type="password" name="password" placeholder="Contraseña" required>
             </div>
-            <button type="submit" href="/">Enviar</button>
+            <button type="submit" class="login-button">Ingresa</button>
         </form>
     </main>
     <section class="footer">

@@ -15,15 +15,26 @@ rel="stylesheet" />
 </head>
 <body>
     <header class="header">
+
     <div class="header-top-bar">
         <img src="./images/logo-mercado-liebre.svg" class="logo">
-        <div class="search-bar">Buscar productos, marcas y otros...</div>
-        <div class="lupa"><i class="fas fa-search"></i></div>
+
+        <!--<div >Buscar productos, marcas y otros...</div>
+        Convierto la barra de busqueda en un FORM-->
+
+        <form action="/" method="GET">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <div class="lupa"><i class="fas fa-search"></i></div>
+            </div>
+        </form>
+
         <h2 class="copy-header">
             <i class="fas fa-hand-holding-usd"></i>
             Comprá en cuotas y sin tarjeta de crédito
         </h2>
     </div>
+
     <nav class="main-navbar">
         <ul class="left-navbar">
             <li><a href="#">Ofertas</a></li>
@@ -32,61 +43,63 @@ rel="stylesheet" />
             <li><a href="#">Ayuda</a></li>
         </ul>
         <ul class="right-navbar">
-            <li><a href="/views/register.html">Creá tu cuenta</a><i class="far fa-address-card"></i></li>
-            <li><a href="#">Ingresá</a> <i class="fas fa-sign-in-alt"></i></li>
+            <li><a href="/register">Creá tu cuenta</a><i class="far fa-address-card"></i></li>
+            <li><a href="/login">Ingresá</a> <i class="fas fa-sign-in-alt"></i></li>
             <li><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
         </ul>
     </nav>
     <div class="burger-menu">
         <i class="fas fa-bars"></i>
         </div> 
-    </header>         
+    </header>
+    
+    
     <h2 class="title-main">Formulario de Registro</h2>
-    <main>
-        <form action="/" method="GET">
+    <main class="main-form">
+        <form action="/" method="GET" class="register-form">
             <div class="control-formulario">
-                <label>Nombre y Apellido:</label>
-                <input type="text" name="name" placeholder="Juan Perez">
+                <label></label>
+                <input type="text" name="name" placeholder="Nombre y Apellido" required>
             </div>
             <div class="control-formulario">
-                <label>Nombre de Usuario:</label>
-                <input type="text" name="user-name" placeholder="JuanPerez1993">
+                <label></label>
+                <input type="text" name="user-name" placeholder="Nombre de Usuario" required>
             </div>
             <div class="control-formulario">
                 <label>Fecha de Nacimiento:</label>
-                <input type="date" name="birthday" min="1900-01-01">
+                <input type="date" name="birthday" min="1900-01-01" required>
             </div>
             <div class="control-formulario">
-                <label>Domicilio:</label>
-                <input type="text" name="address" placeholder="Esmeralda 1320, Buenos Aires">
+                <label></label>
+                <input type="text" name="address" placeholder="Domicilio" required>
             </div>
             <div class="control-formulario">
                 <label>Perfil de Usuario:</label>
-                <input type="radio" name="profile" value="comprador">
-                <input type="radio" name="profile" value="vendedor">
+                <input type="radio" name="profile" value="comprador">Comprador
+                <input type="radio" name="profile" value="vendedor">Vendedor
             </div>
             <div class="control-formulario">
                 <label>Categorías de interés:</label>
-                <input type="checkbox" name="interest" value="Electro">
-                <input type="checkbox" name="interest" value="Moda">
-                <input type="checkbox" name="interest" value="Hogar">
-                <input type="checkbox" name="interest" value="Juguetería">
-                <input type="checkbox" name="interest" value="Visa Sana">
+                <input type="checkbox" name="interest" value="Electro">Electro
+                <input type="checkbox" name="interest" value="Moda">Moda
+                <input type="checkbox" name="interest" value="Hogar">Hogar
+                <input type="checkbox" name="interest" value="Juguetería">Juguetería
+                <input type="checkbox" name="interest" value="Visa Sana">Vida Sana
             </div>
             <div class="control-formulario">
                 <label>Foto de Usuario:</label>
-                <input type="file" name="profile-photo">
+                <input type="file" name="profile-photo" class="user-photo">
             </div>
             <div class="control-formulario">
                 <label>Contraseña:</label>
-                <input type="password" name="password">
+                <input type="password" name="password" required>
             </div>
             <div class="control-formulario">
                 <label>Confirmar contraseña:</label>
-                <input type="password" name="password-confirm">
+                <input type="password" name="password-confirm" required>
             </div>
-            <button type="reset">Borrar</button>
-            <button type="submit" href="/">Enviar</button>
+            <button type="reset" class="form-button">Borrar</button>
+            <button type="submit" href="/" class="form-button">Enviar</button>
         </form>
     </main>
     <section class="footer">

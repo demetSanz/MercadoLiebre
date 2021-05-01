@@ -203,7 +203,12 @@ article p {
     display: none;
 }
 
-/*Estilos del Form*/
+/*Estilos del Form de Registro*/
+
+.main-form {
+    background-color: #EBEBEB;
+    padding: 20px;
+}
 
 .create-form{
     padding: 20px 15px;
@@ -211,21 +216,54 @@ article p {
 
 .control-formulario {
     margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
 }
 
 .control-formulario label {
     margin-bottom: 5px;
-    font-style: italic;
+    font-weight: bold;
     display: block;
 }
 
 .control {
-    width: 100%;
     padding: 8px 8px;
 }
 
 .form-button{
-    background-color: #39b54a;
+    background-color: darkblue;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.register-form {
+    text-align: center;
+}
+
+/*form div input{
+    width: 50%;
+}*/
+
+.user-photo{
+    width: 50%;
+}
+
+/* Estilos del Login */
+
+.main-login {
+    background-color: #EBEBEB;
+    padding: 20px;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.login-button {
+    background-color: red;
     border: none;
     font-size: 20px;
     color: white;
@@ -244,6 +282,7 @@ article p {
     bottom: 0;
     height: auto;
 }
+
 
 /*estilos de iconos .fas .far en footer*/
 .footer .condiciones li i  { 
